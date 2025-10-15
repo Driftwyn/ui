@@ -47,14 +47,14 @@ local CoreGui = cloneref(game:GetService('CoreGui'))
 local Debris = cloneref(game:GetService('Debris'))
 
 local mouse = Players.LocalPlayer:GetMouse()
-local old_Chasesdd = CoreGui:FindFirstChild('Chasesdd')
+local old_DriftwynHub = CoreGui:FindFirstChild('Driftwyn Hub')
 
-if old_Chasesdd then
-    Debris:AddItem(old_Chasesdd, 0)
+if old_DriftwynHub then
+    Debris:AddItem(old_DriftwynHub, 0)
 end
 
-if not isfolder("Chasesdd") then
-    makefolder("Chasesdd")
+if not isfolder("Driftwyn Hub") then
+    makefolder("Driftwyn Hub")
 end
 
 
