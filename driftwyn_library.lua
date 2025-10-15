@@ -515,17 +515,17 @@ end
 
 
 function Library:create_ui()
-    local old_Chasesdd = CoreGui:FindFirstChild('Chasesdd')
+    local old_DriftwynHub = CoreGui:FindFirstChild('Driftwyn Hub')
 
-    if old_Chasesdd then
-        Debris:AddItem(old_Chasesdd, 0)
+    if old_DriftwynHub then
+        Debris:AddItem(old_DriftwynHub, 0)
     end
 
-    local Chasesdd = Instance.new('ScreenGui')
-    Chasesdd.ResetOnSpawn = false
-    Chasesdd.Name = 'Chasesdd'
-    Chasesdd.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-    Chasesdd.Parent = CoreGui
+    local DriftwynHub = Instance.new('ScreenGui')
+    DriftwynHub.ResetOnSpawn = false
+    DriftwynHub.Name = 'Driftwyn Hub'
+    DriftwynHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    DriftwynHub.Parent = CoreGui
     
     local Container = Instance.new('Frame')
     Container.ClipsDescendants = true
@@ -662,8 +662,8 @@ function Library:create_ui()
     local UIScale = Instance.new('UIScale')
     UIScale.Parent = Container    
     
-    self._ui = Chasesdd
-
+   self._ui = DriftwynHub
+    
     local function on_drag(input: InputObject, process: boolean)
         if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then 
             self._dragging = true
@@ -718,9 +718,9 @@ function Library:create_ui()
         end;
     end;
 
-    function self:UIVisiblity()
-        Chasesdd.Enabled = not Chasesdd.Enabled;
-    end;
+   function self:UIVisiblity()
+    DriftwynHub.Enabled = not DriftwynHub.Enabled;
+end;
 
     function self:change_visiblity(state: boolean)
         if state then
